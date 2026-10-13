@@ -59,6 +59,7 @@ To demonstrate frontend development skills, form handling, JavaScript calculatio
 
 - GitHub: https://github.com/Iniyavarshne22
 - Portfolio: https://iniyavarshne22.github.io/My-portfolio/
+- live project: https://iniyavarshne22.github.io/water-footprint-calculator/
 
 ---
 
