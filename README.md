@@ -3,6 +3,8 @@
 
 AquaWise is a responsive frontend web application that estimates daily household water usage and encourages water-saving habits.
 
+live project: https://iniyavarshne22.github.io/water-footprint-calculator/
+
 ## 🌿 Features
 
 - Calculate estimated daily water usage.
@@ -59,7 +61,7 @@ To demonstrate frontend development skills, form handling, JavaScript calculatio
 
 - GitHub: https://github.com/Iniyavarshne22
 - Portfolio: https://iniyavarshne22.github.io/My-portfolio/
-- live project: https://iniyavarshne22.github.io/water-footprint-calculator/
+  
 
 ---
 
