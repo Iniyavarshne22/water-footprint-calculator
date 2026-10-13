@@ -1,0 +1,315 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Calculate your daily water usage and discover simple ways to save water.">
+
+    <title>AquaWise | Water Footprint Calculator</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
+          rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <a href="#" class="brand">
+            <span class="brand-icon">💧</span>
+            AquaWise
+        </a>
+
+        <div class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#calculator">Calculator</a>
+            <a href="#tips">Water-saving tips</a>
+        </div>
+
+        <a href="#calculator" class="nav-button">
+            Calculate now <span>↗</span>
+        </a>
+    </nav>
+
+    <main>
+        <!-- Hero section -->
+        <section class="hero" id="home">
+            <div class="hero-content">
+                <span class="eyebrow">
+                    <span class="status-dot"></span>
+                    A SMALL STEP TOWARDS A GREENER PLANET
+                </span>
+
+                <h1>
+                    Every drop<br>
+                    tells a <span>story.</span>
+                </h1>
+
+                <p class="hero-description">
+                    Discover your daily water footprint and learn
+                    how small changes in your routine can make a
+                    meaningful difference.
+                </p>
+
+                <a href="#calculator" class="primary-button">
+                    Calculate my footprint <span>→</span>
+                </a>
+
+                <div class="hero-note">
+                    <span>✓</span> Simple, quick and free to use
+                </div>
+            </div>
+
+            <div class="hero-visual">
+                <div class="visual-circle">
+                    <div class="water-drop">💧</div>
+                    <div class="leaf leaf-one">🌿</div>
+                    <div class="leaf leaf-two">🍃</div>
+                    <div class="water-ripple"></div>
+                </div>
+
+                <div class="floating-card">
+                    <span class="floating-icon">🌱</span>
+                    <div>
+                        <strong>Every drop counts</strong>
+                        <p>Make water-conscious choices.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Calculator section -->
+        <section class="calculator-section" id="calculator">
+            <div class="section-heading">
+                <span class="section-label">YOUR DAILY HABITS</span>
+                <h2>Let's calculate your footprint.</h2>
+                <p>Tell us a little about your daily water usage.</p>
+            </div>
+
+            <div class="dashboard-grid">
+
+                <!-- Input form -->
+                <div class="card input-card">
+                    <div class="card-heading">
+                        <div>
+                            <h3>Your water usage</h3>
+                            <p>Adjust the values to match your routine.</p>
+                        </div>
+                        <span class="heading-icon">🚿</span>
+                    </div>
+
+                    <form id="waterForm">
+
+                        <div class="form-group">
+                            <label for="showers">
+                                Showers per day
+                            </label>
+                            <div class="input-wrapper">
+                                <input type="number" id="showers"
+                                       min="0" max="50" step="1"
+                                       value="1" required>
+                                <span>showers</span>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="minutes">
+                                Minutes per shower
+                            </label>
+                            <div class="input-wrapper">
+                                <input type="number" id="minutes"
+                                       min="0" max="180" step="1"
+                                       value="5" required>
+                                <span>minutes</span>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="flushes">
+                                Toilet flushes per day
+                            </label>
+                            <div class="input-wrapper">
+                                <input type="number" id="flushes"
+                                       min="0" max="100" step="1"
+                                       value="5" required>
+                                <span>flushes</span>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="laundry">
+                                Laundry loads per week
+                            </label>
+                            <div class="input-wrapper">
+                                <input type="number" id="laundry"
+                                       min="0" max="100" step="1"
+                                       value="3" required>
+                                <span>loads</span>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="dishes">
+                                Dishwashing water per day
+                            </label>
+                            <div class="input-wrapper">
+                                <input type="number" id="dishes"
+                                       min="0" max="1000" step="1"
+                                       value="15" required>
+                                <span>litres</span>
+                            </div>
+                        </div>
+
+                        <p class="form-note">
+                            Your information stays in this browser.
+                        </p>
+
+                        <button type="submit" class="primary-button calculate-button">
+                            Calculate my water usage <span>→</span>
+                        </button>
+
+                        <button type="reset" class="reset-button">
+                            Reset values
+                        </button>
+
+                    </form>
+                </div>
+
+                <!-- Results -->
+                <div class="card results-card" id="results">
+                    <div class="card-heading">
+                        <div>
+                            <h3>Your estimated footprint</h3>
+                            <p>Based on the habits you entered.</p>
+                        </div>
+                        <span class="heading-icon">📊</span>
+                    </div>
+
+                    <div class="result-summary">
+                        <div class="result-icon">💧</div>
+                        <div>
+                            <span class="result-label">DAILY WATER USAGE</span>
+                            <div class="total-number">
+                                <span id="dailyTotal">105.7</span>
+                                <span class="unit">L/day</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="weekly-summary">
+                        <div>
+                            <span>Weekly estimate</span>
+                            <strong id="weeklyTotal">740.0 L</strong>
+                        </div>
+                        <div>
+                            <span>Monthly estimate</span>
+                            <strong id="monthlyTotal">3,171.0 L</strong>
+                        </div>
+                    </div>
+
+                    <h4 class="breakdown-title">Daily usage breakdown</h4>
+
+                    <div class="usage-item">
+                        <div class="usage-info">
+                            <span>🚿 Shower</span>
+                            <strong id="showerResult">45 L</strong>
+                        </div>
+                        <div class="progress-track">
+                            <div class="progress-bar shower-bar"
+                                 id="showerBar"></div>
+                        </div>
+                    </div>
+
+                    <div class="usage-item">
+                        <div class="usage-info">
+                            <span>🚽 Toilet</span>
+                            <strong id="toiletResult">30 L</strong>
+                        </div>
+                        <div class="progress-track">
+                            <div class="progress-bar toilet-bar"
+                                 id="toiletBar"></div>
+                        </div>
+                    </div>
+
+                    <div class="usage-item">
+                        <div class="usage-info">
+                            <span>👕 Laundry</span>
+                            <strong id="laundryResult">25.7 L</strong>
+                        </div>
+                        <div class="progress-track">
+                            <div class="progress-bar laundry-bar"
+                                 id="laundryBar"></div>
+                        </div>
+                    </div>
+
+                    <div class="usage-item">
+                        <div class="usage-info">
+                            <span>🍽️ Dishwashing</span>
+                            <strong id="dishesResult">15 L</strong>
+                        </div>
+                        <div class="progress-track">
+                            <div class="progress-bar dishes-bar"
+                                 id="dishesBar"></div>
+                        </div>
+                    </div>
+
+                    <p class="result-disclaimer">
+                        These are estimates of selected direct household
+                        water uses, not your complete water footprint.
+                        Actual usage depends on your appliances and habits.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Water-saving tips -->
+        <section class="tips-section" id="tips">
+            <div class="section-heading">
+                <span class="section-label">SMALL CHANGES, BIG IMPACT</span>
+                <h2>Make every drop count.</h2>
+                <p>Simple habits can help reduce unnecessary water use.</p>
+            </div>
+
+            <div class="tips-grid">
+                <article class="tip-card">
+                    <div class="tip-icon">🚿</div>
+                    <h3>Shorten your shower</h3>
+                    <p>Try reducing your shower time by a minute or two.</p>
+                </article>
+
+                <article class="tip-card">
+                    <div class="tip-icon">👕</div>
+                    <h3>Wash full loads</h3>
+                    <p>Wait until you have a full laundry load when practical.</p>
+                </article>
+
+                <article class="tip-card">
+                    <div class="tip-icon">🔧</div>
+                    <h3>Check for leaks</h3>
+                    <p>Fix dripping taps and leaking pipes when you notice them.</p>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <a href="#home" class="brand">
+            <span class="brand-icon">💧</span>
+            AquaWise
+        </a>
+
+        <p>Designed to encourage thoughtful water use. 🌿</p>
+
+        <span class="footer-copy">Frontend project · HTML, CSS & JavaScript</span>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
